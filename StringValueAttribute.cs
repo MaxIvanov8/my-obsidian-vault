@@ -1,6 +1,5 @@
-![[StringValueAttribute.cs]]
+﻿namespace avoVPN;
 
-```
 public class StringValueAttribute : Attribute
 {
     public string StringValue { get; protected set; }
@@ -11,5 +10,3 @@ public class StringValueAttribute : Attribute
         StringValue = temp ?? value;
     }
 }
-```
-
