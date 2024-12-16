@@ -13,3 +13,5 @@ public class StringValueAttribute : Attribute
 }
 ```
 
+Конвертер для отображения: [[EnumToNameConverter]]
+
