@@ -1,3 +1,4 @@
+![[Pasted image 20250123164620.png]]
 ```
   <Path Margin="3"
         StrokeThickness="2"
