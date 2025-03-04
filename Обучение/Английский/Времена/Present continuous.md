@@ -8,7 +8,7 @@
 Для описания временных ситуаций:
 *I'm living with some friends until I find a place of my own.*
 
-**Не используются следующие глаголы**
+**Не используются следующие глаголы**:
 - like
 - want
 - need
@@ -25,3 +25,7 @@
 - contain
 - consist
 - seem
+- see
+- hear
+- smell
+- taste
