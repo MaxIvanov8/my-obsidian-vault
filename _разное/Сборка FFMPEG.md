@@ -57,7 +57,19 @@ cd ffmpeg-src
     --enable-protocol=file
 ```
 
-
+**Разбор ключевых флагов:**
+- `--prefix=./build_out`: Указывает папку, куда будут установлены файлы после сборки.
+- `--enable-shared`: **Критически важно для FFME**. Создаёт динамические библиотеки (`.dll` на Windows, `.dylib` на macOS, `.so` на Linux), которые и нужны вашему приложению [](https://deepwiki.com/FFmpeg/FFmpeg/2-build-and-configuration-system).
+    
+- `--disable-static`: Отключает создание статических библиотек (`.a`), уменьшая размер.
+    
+- `--disable-everything`: Наша "чистая доска". Отключает абсолютно все компоненты [](https://hoop.dev/blog/ffmpeg-opt-out-mechanisms-for-lean-and-secure-builds#/portal/#/portal/#/portal/#/#/portal/).
+    
+- `--disable-programs`: Отключает сборку исполняемых файлов `ffmpeg.exe`, `ffplay.exe`, `ffprobe.exe`. Нам нужны только библиотеки, поэтому это сэкономит место [](https://deepwiki.com/FFmpeg/FFmpeg/2-build-and-configuration-system).
+    
+- `--disable-avdevice`, `--disable-swresample`, `--disable-postproc`, `--disable-avfilter`, `--disable-network`: Отключает целые подсистемы, которые не нужны для базовой нарезки видео [](https://hoop.dev/blog/ffmpeg-opt-out-mechanisms-for-lean-and-secure-builds#/portal/#/portal/#/portal/#/#/portal/).
+    
+- `--enable-*`: Включаем только те библиотеки (`avformat`, `avcodec` и т.д.), форматы, кодеки и протоколы, которые мы обсудили в начале.
 
 1.      Скачать нужную версию Ffmpeg
 2.      Задать конфигурацию
