@@ -30,6 +30,35 @@ git clone --depth 1 --branch n6.0 https://github.com/FFmpeg/FFmpeg.git ffmpeg-sr
 cd ffmpeg-src
 ```
 
+**Создание базового скрипта конфигурации**: Находясь в папке `ffmpeg-src`, мы запустим `./configure` с набором флагов.
+
+```
+./configure \
+    --prefix=./build_out \
+    --enable-shared \
+    --disable-static \
+    --disable-everything \
+    --disable-programs \
+    --disable-doc \
+    --disable-avdevice \
+    --disable-swresample \
+    --disable-postproc \
+    --disable-avfilter \
+    --disable-network \
+    --enable-avformat \
+    --enable-avcodec \
+    --enable-swscale \
+    --enable-avutil \
+    --enable-demuxer=mov,matroska \
+    --enable-muxer=mp4,matroska \
+    --enable-decoder=h264,hevc,aac,mp3 \
+    --enable-encoder=libx264,aac \
+    --enable-parser=h264,hevc,aac,mpegaudio \
+    --enable-protocol=file
+```
+
+
+
 1.      Скачать нужную версию Ffmpeg
 2.      Задать конфигурацию
 3.      Make
