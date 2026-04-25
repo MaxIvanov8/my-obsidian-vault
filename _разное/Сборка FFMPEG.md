@@ -62,9 +62,8 @@ cd ffmpeg-src
 - `--enable-shared`: Создаёт динамические библиотеки (.dll).
 - `--disable-static`: Отключает создание статических библиотек, уменьшая размер.
 - `--disable-everything`:  Отключает абсолютно все компоненты.
-- `--disable-avdevice`, `--disable-swresample`, `--disable-postproc`, `--disable-avfilter`, `--disable-network`: Отключает целые подсистемы, которые не нужны для базовой нарезки видео [](https://hoop.dev/blog/ffmpeg-opt-out-mechanisms-for-lean-and-secure-builds#/portal/#/portal/#/portal/#/#/portal/).
-    
-- `--enable-*`: Включаем только те библиотеки (`avformat`, `avcodec` и т.д.), форматы, кодеки и протоколы, которые мы обсудили в начале.
+- `--disable-avdevice`, `--disable-swresample`, `--disable-postproc`, `--disable-avfilter`, `--disable-network`: Отключает целые подсистемы, которые не нужны для базовой нарезки видео
+- `--enable-: Включаем только нужные библиотеки.
 
 1.      Скачать нужную версию Ffmpeg
 2.      Задать конфигурацию
